@@ -11,6 +11,15 @@
       font-weight: bold;
       margin-top: 15px;
     }
+    .price-label {
+      display: inline-block;
+      width: 250px;
+    }   
+    .price-value {
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+    }
     .hidden {
       display: none;
     }
@@ -85,43 +94,103 @@
     <!-- 商品ごとのフォーム -->
     <!-- 商品名、価格、個数入力欄を記述 -->
     <!-- 例：<label>商品名</label><input type="number" data-price="価格"> -->
-    <div class="subsection">【会場限定販売】</div>
-    <label>ペンライト 3000円✕<input type="number" data-price="3000" class="price-input" value="0"></label><br>
-    <label>カワウソくん。ぬいぐるみチャーム 1800円✕<input type="number" data-price="1800" class="price-input" value="0"></label><br>
-    <div class="subsection">【会場限定ランダム商品】</div>
-    <label>ポストカード4枚セット(ランダム全11種) 800円✕<input type="text" data-price="800" class="price-input" value="0"></label><br>
-    <label>缶バッジ(ランダム全11種 当たり付き) 500円✕<input type="text" data-price="500" class="price-input" value="0"></label><br>
-    <div class="subsection">布もの</div>
-    <label>Tシャツ WHITE/BLACK 3000円✕<input type="number" data-price="3000" class="price-input" value="0"></label><br>
-    <label>ロングスリーブTシャツ 4200円✕<input type="number" data-price="4200" class="price-input" value="0"></label><br>
-    <label>プルオーバーパーカ 7000円✕<input type="number" data-price="7000" class="price-input" value="0"></label><br>
-    <label>バケットハット 2800円✕<input type="number" data-price="2800" class="price-input" value="0"></label><br>
-    <label>小倉唯と共に!タオル 2000円✕<input type="number" data-price="2000" class="price-input" value="0"></label><br>
-    <label>トートバッグ 2500円✕<input type="number" data-price="2500" class="price-input" value="0"></label><br>
-    <div class="subsection">その他</div>
-    <label>パンフレット 3000円✕<input type="number" data-price="3000" class="price-input" value="0"></label><br>
-    <label>サテンステッカー2枚セット 300円✕<input type="number" data-price="300" class="price-input" value="0"></label><br>
-    <label>バウンスバンド 800円✕<input type="number" data-price="800" class="price-input" value="0"></label><br>
-    <label>台紙付きアクリルスタンド(全4種) 1500円✕<input type="number" data-price="1500" class="price-input" value="0"></label><br>
-    <label>卓上カレンダー 2000円✕<input type="number" data-price="2000" class="price-input" value="0"></label><br>
-    <label>ラバーキーホルダーセット 1600円✕<input type="number" data-price="1600" class="price-input" value="0"></label><br>
-    <div class="subsection">CD販売</div>
-    <label>初回限定盤A「Empty//Princess.」 2310円✕<input type="number" data-price="2310" class="price-input" value="0"></label><br>
-    <label>初回限定盤B「Empty//Princess.」 2310円✕<input type="number" data-price="2310" class="price-input" value="0"></label><br>
-    <label>通常盤「Empty//Princess.」 1590円✕<input type="number" data-price="1590" class="price-input" value="0"></label><br>
-    <div class="subsection" onclick="toggleVisibility('hiddenSection')">▼旧譜はこちら</div>
-    <div id="hiddenSection" class="hidden">
-    <label>初回限定盤A「秘密♡Melody」 2310円✕<input type="number" data-price="2310" class="price-input" value="0"></label><br>
-    <label>初回限定盤B「秘密♡Melody」 2310円✕<input type="number" data-price="2310" class="price-input" value="0"></label><br>
-    <label>通常盤「秘密♡Melody」 1590円✕<input type="number" data-price="1590" class="price-input" value="0"></label><br>
-    <label>わたゆり盤「秘密♡Melody」 1430円✕<input type="number" data-price="1430" class="price-input" value="0"></label><br>
-    <label>初回限定盤A「Love∞Vision」 2310円✕<input type="number" data-price="2310" class="price-input" value="0"></label><br>
-    <label>初回限定盤B「Love∞Vision」 2310円✕<input type="number" data-price="2310" class="price-input" value="0"></label><br>
-    <label>通常盤「Love∞Vision」 1590円✕<input type="number" data-price="1590" class="price-input" value="0"></label><br>
-    </div>
+    
+<div class="subsection">【会場限定販売】</div>
+    <label class="price-label">ペンライト</label>
+    <label class="price-value">3000円✕</label>
+    <input type="number" data-price="3000" class="price-input" value="0"><br>
+    <label class="price-label">カワウソくんぬいぐるみチャーム</label>
+    <label class="price-value">1800円✕</label>
+    <input type="number" data-price="1800" class="price-input" value="0"><br>
+    
+<div class="subsection">【会場限定ランダム商品】</div>
+    <label class="price-label">ポストカード4枚セット</label>
+    <label class="price-value">800円✕</label>
+    <input type="text" data-price="800" class="price-input" value="0"><br>    
+    <label class="price-label">缶バッジ</label>
+    <label class="price-value">500円✕</label>
+    <input type="text" data-price="500" class="price-input" value="0"><br>  
+    
+<div class="subsection">布もの</div>
+  <label class="item-label">Tシャツ WHITE/BLACK</label>
+  <label class="item-price">3000円✕</label>
+  <input type="number" data-price="3000" class="price-input" value="0"><br>
+  <label class="item-label">ロングスリーブTシャツ</label>
+  <label class="item-price">4200円✕</label>
+  <input type="number" data-price="4200" class="price-input" value="0"><br>
+  <label class="item-label">プルオーバーパーカ</label>
+  <label class="item-price">7000円✕</label>
+  <input type="number" data-price="7000" class="price-input" value="0"><br>
+  <label class="item-label">バケットハット</label>
+  <label class="item-price">2800円✕</label>
+  <input type="number" data-price="2800" class="price-input" value="0"><br>
+  <label class="item-label">小倉唯と共に!タオル</label>
+  <label class="item-price">2000円✕</label>
+  <input type="number" data-price="2000" class="price-input" value="0"><br>
+  <label class="item-label">トートバッグ</label>
+  <label class="item-price">2500円✕</label>
+  <input type="number" data-price="2500" class="price-input" value="0"><br>
+
+<div class="subsection">その他</div>
+  <label class="item-label">パンフレット</label>
+  <label class="item-price">3000円✕</label>
+  <input type="number" data-price="3000" class="price-input" value="0"><br>
+  <label class="item-label">サテンステッカー2枚セット</label>
+  <label class="item-price">300円✕</label>
+  <input type="number" data-price="300" class="price-input" value="0"><br>
+  <label class="item-label">バウンスバンド</label>
+  <label class="item-price">800円✕</label>
+  <input type="number" data-price="800" class="price-input" value="0"><br>
+  <label class="item-label">台紙付きアクリルスタンド(全4種)</label>
+  <label class="item-price">1500円✕</label>
+  <input type="number" data-price="1500" class="price-input" value="0"><br>
+  <label class="item-label">卓上カレンダー</label>
+  <label class="item-price">2000円✕</label>
+  <input type="number" data-price="2000" class="price-input" value="0"><br> 
+  <label class="price-label">ラバーキーホルダーセット</label>
+  <label class="price-value">1600円✕</label>
+  <input type="number" data-price="1600" class="price-input" value="0"><br>
+  
+<div class="subsection">ニューシングル「Empty//Princess.」</div>
+  <label class="item-label">初回限定盤A</label>
+  <label class="item-price">2310円✕</label>
+  <input type="number" data-price="2310" class="price-input" value="0"><br>
+  <label class="item-label">初回限定盤B</label>
+  <label class="item-price">2310円✕</label>
+  <input type="number" data-price="2310" class="price-input" value="0"><br>
+  <label class="item-label">通常盤</label>
+  <label class="item-price">1590円✕</label>
+  <input type="number" data-price="1590" class="price-input" value="0"><br>
+  
+<div class="subsection" onclick="toggleVisibility('hiddenSection')">▼旧譜はこちら</div>
+<div id="hiddenSection" class="hidden">
+<div class="subsection">「秘密♡Melody」</div>
+  <label class="item-label">初回限定盤A</label>
+  <label class="item-price">2310円✕</label>
+  <input type="number" data-price="2310" class="price-input" value="0"><br>
+  <label class="item-label">初回限定盤B</label>
+  <label class="item-price">2310円✕</label>
+  <input type="number" data-price="2310" class="price-input" value="0"><br>
+  <label class="item-label">通常盤</label>
+  <label class="item-price">1590円✕</label>
+  <input type="number" data-price="1590" class="price-input" value="0"><br>
+  <label class="item-label">わたゆり盤</label>
+  <label class="item-price">1430円✕</label>
+  <input type="number" data-price="1430" class="price-input" value="0"><br>
+    
+<div class="subsection">「Love∞Vision」</div>
+  <label class="item-label">初回限定盤A</label>
+  <label class="item-price">2310円✕</label>
+  <input type="number" data-price="2310" class="price-input" value="0"><br>
+  <label class="item-label">初回限定盤B</label>
+  <label class="item-price">2310円✕</label>
+  <input type="number" data-price="2310" class="price-input" value="0"><br>
+  <label class="item-label">通常盤</label>
+  <label class="item-price">1590円✕</label>
+  <input type="number" data-price="1590" class="price-input" value="0"><br>
+</div>
 
     <div id="totalPrice">合計金額: 0円</div>
   </form>
 </body>
 </html>
-
