@@ -7,6 +7,10 @@
     .price-input {
       text-align: right;
     }
+    .price-sum {
+      font-weight: bold;
+      margin-top: 15px;
+    }
     .subsection {
       font-weight: bold;
       margin-top: 15px;
@@ -94,6 +98,8 @@
     <!-- 商品ごとのフォーム -->
     <!-- 商品名、価格、個数入力欄を記述 -->
     <!-- 例：<label>商品名</label><input type="number" data-price="価格"> -->
+    
+<div id="totalPrice" class="price-sum">合計金額: 0円</div>
     
 <div class="subsection">【会場限定販売】</div>
     <label class="item-label">ペンライト</label>
@@ -190,7 +196,6 @@
     <input type="number" data-price="1590" class="price-input" value="0"><br>
 </div>
 
-    <div id="totalPrice">合計金額: 0円</div>
   </form>
 </body>
 </html>
